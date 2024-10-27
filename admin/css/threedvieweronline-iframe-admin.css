@@ -1,0 +1,160 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.cyno-wrap .main {
+    margin: 10px 0px;
+    padding: 0px 30px;
+    border: 1px solid rgba(0,0,0,.2);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+.cyno-wrap .main > h1.heading-inline
+{
+    display: block;
+    margin: 10px 0px;
+}
+.cyno-wrap section.cynotabs-section {
+    display: none;
+    padding: 20px 0;
+    border-top: 1px solid #000;
+}
+
+.cyno-wrap input.cynotabs.hide {
+  display: none;
+}
+
+.cyno-wrap label.cynotabs-label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 10px;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  border: 1px solid transparent;
+}
+
+.cyno-wrap label.cynotabs-label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.cyno-wrap label.cynotabs-label > i
+{
+    margin-right:5px;
+}    
+.cyno-wrap label.cynotabs-label:hover {
+  color: #789;
+  cursor: pointer;
+}
+
+.cyno-wrap input.cynotabs:checked + label {
+  color: #0af;
+  border: 1px solid #abc;
+  border-top: 2px solid #0af;
+  border-bottom: 2px solid #fff;
+}
+
+.cyno-wrap #tab1:checked ~ #content1,
+.cyno-wrap #tab2:checked ~ #content2,
+.cyno-wrap #tab3:checked ~ #content3,
+.cyno-wrap #tab4:checked ~ #content4, 
+.cyno-wrap #tab5:checked ~ #content5,
+.cyno-wrap #tab6:checked ~ #content6,
+.cyno-wrap #tab7:checked ~ #content7,
+.cyno-wrap #tab8:checked ~ #content8,
+.cyno-wrap #tab9:checked ~ #content9 {
+  display: block;
+}
+
+.cyno-wrap .onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.cyno-wrap .onoffswitch-checkbox {
+    display: none;
+}
+.cyno-wrap .onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #d6d0d0; border-radius: 20px;
+}
+.cyno-wrap .onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.cyno-wrap .onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.cyno-wrap .onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #3c8dbc; color: #FFFFFF;
+}
+.cyno-wrap .onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #7b7878;
+    text-align: right;
+}
+.cyno-wrap .onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 56px;
+    border: 2px solid #d6d0d0; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.cyno-wrap .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.cyno-wrap .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+.cyno-wrap input.wscc-input,.cyno-wrap select.wscc-select
+{
+    height: 35px;
+    width: 50%;
+}
+.cyno-wrap select.wscc-select.multiple
+{
+    height: 100px;
+    width: 50%;
+}
+.cyno-wrap textarea.wscc-textarea
+{
+    width: 50%;
+}
+.cyno-wrap input.wscc-button
+{
+    height: 35px;
+    font-size:16px;
+}
+tr.has-error  input,
+tr.has-error  textarea,
+tr.has-error  select {
+    border:2px solid red;
+}
+tr.has-error  label,
+tr.has-error  p {
+    color:red;
+}
+.note{
+    color:red !important;
+}
+@media screen and (max-width: 800px) {
+ .cyno-wrap label.cynotabs-label {
+    font-size: 0;
+  }
+ .cyno-wrap label.cynotabs-label > i {
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cyno-wrap label.cynotabs-label {
+    padding: 15px;
+  }
+}
